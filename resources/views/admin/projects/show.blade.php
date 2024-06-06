@@ -7,6 +7,9 @@
         <strong>ID</strong>: {{ $project->id }}
     </div>
     <div>
+        <strong>Type</strong>: {{ $project->type ? $project->type->name : 'non specificato' }}
+    </div>
+    <div>
         <strong>Slug</strong>: {{ $project->slug }}
     </div>
     <div>

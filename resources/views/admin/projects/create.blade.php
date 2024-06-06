@@ -17,7 +17,17 @@
         </div>
 
         <div class="mb-3">
-            <label for="cover_image" class="form-label">Immagine</label>
+            <label class="form-label" for="type_id">Type</label>
+            <select class="form-select" id="type_id" name="type_id">
+                <option value="">Select</option>
+                @foreach ($types as $type)
+                    <option value="{{ $type->id }}">{{ $type->name }}</option>
+                @endforeach
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="cover_image" class="form-label">Image</label>
             <input class="form-control" type="file" id="cover_image" name="cover_image">
         </div>
 
